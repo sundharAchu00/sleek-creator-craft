@@ -86,7 +86,6 @@ const Skills = () => {
                         <span className="text-2xl">{skill.icon}</span>
                         <span className="text-gray-300 font-medium">{skill.name}</span>
                       </div>
-                      <span className="text-[#9b87f5] font-semibold">{skill.proficiency}%</span>
                     </div>
                     <div className="w-full bg-[rgba(255,255,255,0.1)] rounded-full h-2">
                       <div 
