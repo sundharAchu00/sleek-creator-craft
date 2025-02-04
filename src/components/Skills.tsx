@@ -53,28 +53,36 @@ const skillsData: SkillCategory[] = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-[#1A1F2C]">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">Skills</h2>
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl font-bold text-center mb-16 text-white"
+        >
+          Skills
+        </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillsData.map((category, index) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl shadow-lg"
+              className="skill-card"
             >
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">{category.title}</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#9b87f5]">{category.title}</h3>
               <div className="space-y-3">
                 {category.skills.map((skill) => (
-                  <div
+                  <motion.div
                     key={skill.name}
-                    className="flex items-center space-x-2 p-2 bg-white rounded-lg hover:bg-blue-50 transition-colors duration-300"
+                    whileHover={{ scale: 1.05 }}
+                    className="flex items-center space-x-2 p-2 bg-[rgba(255,255,255,0.03)] rounded-lg"
                   >
                     <span className="text-xl">{skill.icon}</span>
-                    <span className="text-gray-700">{skill.name}</span>
-                  </div>
+                    <span className="text-gray-300">{skill.name}</span>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
