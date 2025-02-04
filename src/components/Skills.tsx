@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 interface Skill {
   name: string;
   icon: string;
-  proficiency: number;
 }
 
 interface SkillCategory {
@@ -15,47 +14,47 @@ const skillsData: SkillCategory[] = [
   {
     title: "Frontend",
     skills: [
-      { name: "HTML", icon: "🌐", proficiency: 90 },
-      { name: "CSS", icon: "🎨", proficiency: 85 },
-      { name: "JavaScript", icon: "📜", proficiency: 88 },
-      { name: "ReactJS", icon: "⚛️", proficiency: 85 },
-      { name: "TypeScript", icon: "📘", proficiency: 82 },
+      { name: "HTML", icon: "🌐" },
+      { name: "CSS", icon: "🎨" },
+      { name: "JavaScript", icon: "📜" },
+      { name: "ReactJS", icon: "⚛️" },
+      { name: "TypeScript", icon: "📘" },
     ],
   },
   {
     title: "Backend",
     skills: [
-      { name: "Python", icon: "🐍", proficiency: 85 },
-      { name: "Java", icon: "☕", proficiency: 88 },
-      { name: "JDBC", icon: "🔌", proficiency: 80 },
-      { name: "Servlets", icon: "🌐", proficiency: 82 },
-      { name: "Spring", icon: "🍃", proficiency: 85 },
-      { name: "SpringBoot", icon: "🚀", proficiency: 84 },
-      { name: "Microservices", icon: "🔄", proficiency: 80 },
+      { name: "Python", icon: "🐍" },
+      { name: "Java", icon: "☕" },
+      { name: "JDBC", icon: "🔌" },
+      { name: "Servlets", icon: "🌐" },
+      { name: "Spring", icon: "🍃" },
+      { name: "SpringBoot", icon: "🚀" },
+      { name: "Microservices", icon: "🔄" },
     ],
   },
   {
     title: "Database",
     skills: [
-      { name: "MySQL", icon: "💾", proficiency: 85 },
+      { name: "MySQL", icon: "💾" },
     ],
   },
   {
     title: "DevOps",
     skills: [
-      { name: "Docker", icon: "🐳", proficiency: 82 },
-      { name: "Jenkins", icon: "🔧", proficiency: 80 },
-      { name: "AWS EC2", icon: "☁️", proficiency: 78 },
-      { name: "AWS Lambda", icon: "λ", proficiency: 75 },
-      { name: "AWS RDS", icon: "🗄️", proficiency: 77 },
+      { name: "Docker", icon: "🐳" },
+      { name: "Jenkins", icon: "🔧" },
+      { name: "AWS EC2", icon: "☁️" },
+      { name: "AWS Lambda", icon: "λ" },
+      { name: "AWS RDS", icon: "🗄️" },
     ],
   },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-[#1A1F2C]">
-      <div className="container mx-auto px-4">
+    <section id="skills" className="py-24 bg-[#1A1F2C]">
+      <div className="container mx-auto px-6 max-w-[1400px]">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -79,20 +78,10 @@ const Skills = () => {
                   <motion.div
                     key={skill.name}
                     whileHover={{ scale: 1.05 }}
-                    className="p-4 bg-[rgba(255,255,255,0.03)] rounded-lg"
+                    className="p-4 bg-[rgba(255,255,255,0.03)] rounded-lg flex items-center space-x-3"
                   >
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center space-x-3">
-                        <span className="text-2xl">{skill.icon}</span>
-                        <span className="text-gray-300 font-medium">{skill.name}</span>
-                      </div>
-                    </div>
-                    <div className="w-full bg-[rgba(255,255,255,0.1)] rounded-full h-2">
-                      <div 
-                        className="bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] h-2 rounded-full"
-                        style={{ width: `${skill.proficiency}%` }}
-                      />
-                    </div>
+                    <span className="text-2xl">{skill.icon}</span>
+                    <span className="text-gray-300 font-medium">{skill.name}</span>
                   </motion.div>
                 ))}
               </div>
