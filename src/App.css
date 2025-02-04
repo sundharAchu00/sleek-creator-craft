@@ -20,6 +20,7 @@
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  padding: 2rem;
 }
 
 .profile-image {
@@ -36,6 +37,7 @@
   background: linear-gradient(90deg, #9b87f5, #7E69AB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @keyframes float {
@@ -54,13 +56,15 @@
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-radius: 16px;
-  padding: 1.5rem;
+  padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  border-color: rgba(155, 135, 245, 0.3);
 }
 
 .contact-form {
@@ -68,8 +72,8 @@
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 2rem;
-  max-width: 600px;
-  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form input,
@@ -81,6 +85,14 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
   color: white;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #9b87f5;
+  box-shadow: 0 0 0 2px rgba(155, 135, 245, 0.2);
 }
 
 .contact-form button {
@@ -91,9 +103,10 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .contact-form button:hover {
   transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(155, 135, 245, 0.4);
 }

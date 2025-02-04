@@ -20,7 +20,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
           >
             Full Stack <span className="text-gradient">Developer</span>
           </motion.h1>
@@ -28,20 +28,29 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Passionate about creating robust and scalable applications with modern technologies
+            Transforming ideas into scalable solutions with modern technologies. 
+            Specialized in building robust full-stack applications with a focus on 
+            performance and user experience.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex gap-4 justify-center"
           >
             <a 
               href="#contact" 
-              className="bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               Get In Touch
+            </a>
+            <a 
+              href="#skills" 
+              className="border-2 border-[#9b87f5] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#9b87f5]/10 transition-all duration-300"
+            >
+              View Skills
             </a>
           </motion.div>
         </div>
